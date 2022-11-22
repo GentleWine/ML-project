@@ -34,3 +34,4 @@ img = mx.image.imdecode(open('1.jpg', 'rb').read())
 # plt.show()
 # print(img.asnumpy)
 
+
