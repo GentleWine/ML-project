@@ -1,0 +1,36 @@
+import cv2
+from imageio import imread
+from skimage import io
+from PIL import Image
+import mxnet as mx
+import numpy as np
+import matplotlib.pyplot as plt
+
+## cv2
+img = cv2.imread('1.jpg')  # ,1\0\-1)
+# plt.imshow(img)
+# plt.show()
+# np.set_printoptions(threshold=np.inf)
+# print(img)
+
+## scipy
+img = imread('1.jpg')
+# plt.imshow(img)
+# plt.show()
+# print(img)
+
+## skimage
+img = io.imread('1.jpg')
+
+## pillow
+img = Image.open('1.jpg')  # 此时为Image内部类文件
+img = np.array(img)        # 转化为 np.array
+
+## mx.image
+img = mx.image.imdecode(open('1.jpg', 'rb').read())
+
+
+# plt.imshow(img.asnumpy())
+# plt.show()
+# print(img.asnumpy)
+
